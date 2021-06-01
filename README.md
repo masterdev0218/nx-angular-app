@@ -30,16 +30,22 @@
 
 ## :signal_strength: Technologies
 
-* [Nx](https://nx.dev) used to create project workspace
+* [Nx with Angular plugin](https://nx.dev/angular) used to create project workspace
 * [Angular framework v12](https://angular.io/)
+* [Nest Plugin v7](https://nx.dev/latest/angular/nest/overview)
 
 ## :floppy_disk: Setup
 
 * Install nx using `npm install -g nx`
 * In app, install dependencies using `npm i`
 * Run `nx dep-graph` to see a diagram of the dependencies of your projects.
-* Run `nx serve todos` for a dev server. Frontend will open at
-  `http://localhost:4200/` - refreshes on code changes
+* Run `nx serve todos` for a dev server. Frontend will open at `http://localhost:4200/` - refreshes on code changes
+
+**Nest Backend:**
+
+* `npx nx serve api` to serve the application
+* `npx nx build api` to build the application
+* `npx nx test api` to test the application
 
 ## :wrench: Testing
 
