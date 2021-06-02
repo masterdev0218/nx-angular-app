@@ -22,11 +22,14 @@
 
 ## :books: General info
 
-* tba
+* Nx uses a single repo for both frontend and backend apps with a shared library.
+* Nx ensures that adding another app to the repo does not increase existing test or build times.
+* Uses computational caching - so test and lint tasks are not repeated on unchanged code.
+* Nx can create a dependency diagram - see screenshot below.
 
 ## :camera: Screenshots
 
-![Frontend screenshot](./img/home.png)
+![Frontend screenshot](./img/dep_graph.png)
 
 ## :signal_strength: Technologies
 
@@ -38,36 +41,42 @@
 
 * Install nx using `npm install -g nx`
 * In app, install dependencies using `npm i`
-* Run `nx dep-graph` to see a diagram of the dependencies of your projects.
-* Run `nx serve todos` for a dev server. Frontend will open at `http://localhost:4200/` - refreshes on code changes
+* `nx dep-graph` to see a diagram of the dependencies of your projects.
+* `nx serve todos` for a dev server. Frontend will open at `http://localhost:4200/` - refreshes on code changes
+* `npx nx build todos`
+* `npx nx lint todos --with-deps` to lint todos app & libraries
 
 **Nest Backend:**
 
-* `npx nx serve api` to serve the application
-* `npx nx build api` to build the application
-* `npx nx test api` to test the application
+* `npx nx serve api` to serve the backend
+* `npx nx build api` to build the backend
+* `npx nx test api` to test the backend
 
 ## :wrench: Testing
 
-* tba
+* `npx nx e2e todos-e2e --watch` for end to end testing of todos app
+* `npx nx test` to test todos app - tests need fixing
 
 ## :computer: Code Examples
 
-* f
+* From `app.service.ts`: a simple function to create a random todo title string
 
 ```typescript
-
+addTodo() {
+    this.todos.push({
+      title: `New todo ${Math.floor(Math.random() * 1000)}`,
+    });
+  }
 ```
 
 ## :cool: Features
 
 * tba
 
-## :clipboard: Status, Testing & To-Do List
+## :clipboard: Status, To-Do List
 
-* Status: in work.
-* Testing: not tested yet
-* To-Do: complete
+* Status: Working.
+* To-Do: `nxapp\apps\todos\src\app\app.component.spec.ts` test specs need to be updated.
 
 ## :clap: Inspiration/General Tools
 
@@ -75,7 +84,7 @@
 
 ## :file_folder: License
 
-* N/A
+* This project is licensed under the terms of the MIT license.
 
 ## :envelope: Contact
 
