@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Todo } from '@nxapp/data';
 
 @Component({
@@ -6,11 +6,6 @@ import { Todo } from '@nxapp/data';
   templateUrl: './todos.component.html',
   styleUrls: ['./todos.component.css']
 })
-export class TodosComponent implements OnInit {
+export class TodosComponent {
   @Input() todos: Todo[];
-  constructor() {}
-
-  ngOnInit(): void {
-  }
-
 }
