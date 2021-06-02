@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@nxapp/data": ["libs/data/src/index.ts"]
+      "@nxapp/data": ["libs/data/src/index.ts"],
+      "@nxapp/ui": ["libs/ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
