@@ -1,9 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
-interface Todo {
-  title: string;
-}
+import { Todo } from '@nxapp/data'
 
 @Component({
   selector: 'nxapp-root',
@@ -11,7 +8,7 @@ interface Todo {
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  todos: Todo[];
+  todos: Todo[] = [];
 
   constructor(private http: HttpClient) {
     this.fetch();
